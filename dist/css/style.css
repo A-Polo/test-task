@@ -414,6 +414,11 @@ input[type="text"] {
   margin-bottom: 34px;
 }
 
+.row {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 .row:before, .row:after {
   content: "";
   display: table;
@@ -422,8 +427,8 @@ input[type="text"] {
   clear: both;
 }
 .row .col-left {
-  float: left;
-  width: 45%;
+  width: 50%;
+  padding-right: 70px;
 }
 .row .code-block .code-block-title {
   margin-bottom: 34px;
@@ -436,15 +441,21 @@ input[type="text"] {
 }
 .row .code-block p {
   font-size: 14px;
+  text-align: justify;
 }
 .row .col-right {
-  float: right;
   width: 50%;
 }
 .row .col-right .user-list {
   padding: 0;
 }
-.row .col-right .list-tab-header a {
+
+.list-tab .tab-content {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.list-tab .list-tab-header a {
   border-radius: 9px;
   background-clip: padding-box;
   display: inline-block;
@@ -462,7 +473,7 @@ input[type="text"] {
   -ms-border-bottom-left-radius: 0;
   -webkit-border-bottom-left-radius: 0;
 }
-.row .col-right .list-tab-header a:nth-child(1) {
+.list-tab .list-tab-header a:nth-child(1) {
   border-bottom-left-radius: 0;
   -moz-border-bottom-left-radius: 0;
   -ms-border-bottom-left-radius: 0;
@@ -470,7 +481,7 @@ input[type="text"] {
   margin-left: -1px;
   background-color: #f8f8f8;
 }
-.row .col-right .list-tab-header a:nth-child(1)::after {
+.list-tab .list-tab-header a:nth-child(1)::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -479,7 +490,7 @@ input[type="text"] {
   top: -2px;
   background: url("../images/list-tab-header-disabled.png") no-repeat;
 }
-.row .col-right .list-tab-header a:nth-child(2)::after {
+.list-tab .list-tab-header a:nth-child(2)::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -488,7 +499,7 @@ input[type="text"] {
   width: 34px;
   top: 0;
 }
-.row .col-right .list-tab-body {
+.list-tab .list-tab-body {
   -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   border-radius: 5px;
@@ -501,11 +512,11 @@ input[type="text"] {
   -ms-border-top-left-radius: 0;
   -webkit-border-top-left-radius: 0;
 }
-.row .col-right .list-tab-body .col-left {
+.list-tab .list-tab-body .col-left {
   float: left;
   width: 50%;
 }
-.row .col-right .list-tab-body .col-left .progress-bar {
+.list-tab .list-tab-body .col-left .progress-bar {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #949494;
   border-right: 1px solid #a7a7a7;
@@ -516,7 +527,7 @@ input[type="text"] {
   background: linear-gradient(#f4f8f9, #e8e9e9);
   padding: 2px;
 }
-.row .col-right .list-tab-body .col-left .progress-bar .progress-bar-inset {
+.list-tab .list-tab-body .col-left .progress-bar .progress-bar-inset {
   border-radius: 3px;
   background-clip: padding-box;
   background: linear-gradient(#ffbb30, #ff8d1c);
@@ -531,7 +542,7 @@ input[type="text"] {
   font-family: Verdana;
   font-weight: bold;
 }
-.row .col-right .list-tab-body .col-left .step {
+.list-tab .list-tab-body .col-left .step {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #949494;
   border-right: 1px solid #a7a7a7;
@@ -542,20 +553,20 @@ input[type="text"] {
   font-size: 0;
   overflow: hidden;
 }
-.row .col-right .list-tab-body .col-left .step ul li {
+.list-tab .list-tab-body .col-left .step ul li {
   list-style: none;
   float: right;
   position: relative;
   vertical-align: top;
   width: 20%;
 }
-.row .col-right .list-tab-body .col-left .step ul li.active:before {
+.list-tab .list-tab-body .col-left .step ul li.active:before {
   content: '';
   display: block;
   background: linear-gradient(360deg, #ffab04, #ff8c1d);
   border: 1px solid #e28413;
 }
-.row .col-right .list-tab-body .col-left .step ul li.disable:before {
+.list-tab .list-tab-body .col-left .step ul li.disable:before {
   -ms-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
   content: '';
@@ -563,7 +574,7 @@ input[type="text"] {
   background: linear-gradient(360deg, #f5fafb, #e7e7e7);
   border: 1px solid #ccc;
 }
-.row .col-right .list-tab-body .col-left .step ul li:before {
+.list-tab .list-tab-body .col-left .step ul li:before {
   -ms-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
   content: '';
@@ -579,10 +590,10 @@ input[type="text"] {
   background: linear-gradient(360deg, #c6c9ca, #bfbfbf);
   border: 1px solid #ccc;
 }
-.row .col-right .list-tab-body .col-left .step ul li:first-child:before {
+.list-tab .list-tab-body .col-left .step ul li:first-child:before {
   margin-right: -10px;
 }
-.row .col-right .list-tab-body .col-left .step ul li a {
+.list-tab .list-tab-body .col-left .step ul li a {
   font-family: Verdana;
   font-size: 9px;
   color: #4e4e4e;
@@ -594,11 +605,10 @@ input[type="text"] {
   position: relative;
   display: block;
 }
-.row .col-right .list-tab-body .col-right {
-  float: right;
+.list-tab .list-tab-body .col-right {
   width: 50%;
 }
-.row .col-right .list-tab-body .col-right .progress-radial {
+.list-tab .list-tab-body .col-right .progress-radial {
   border-radius: 50%;
   background-clip: padding-box;
   margin: 0 auto;
@@ -607,7 +617,7 @@ input[type="text"] {
   height: 90px;
   background-color: #ffa352;
 }
-.row .col-right .list-tab-body .col-right .progress-radial .overlay {
+.list-tab .list-tab-body .col-right .progress-radial .overlay {
   position: absolute;
   width: 55px;
   height: 55px;
@@ -619,81 +629,81 @@ input[type="text"] {
   line-height: 55px;
   font-size: 16px;
 }
-.row .col-right .list-tab-body .col-right .progress-0 {
+.list-tab .list-tab-body .col-right .progress-0 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(150deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-5 {
+.list-tab .list-tab-body .col-right .progress-5 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(168deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-10 {
+.list-tab .list-tab-body .col-right .progress-10 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(186deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-15 {
+.list-tab .list-tab-body .col-right .progress-15 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(204deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-20 {
+.list-tab .list-tab-body .col-right .progress-20 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(222deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-25 {
+.list-tab .list-tab-body .col-right .progress-25 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(240deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-30 {
+.list-tab .list-tab-body .col-right .progress-30 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(258deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-35 {
+.list-tab .list-tab-body .col-right .progress-35 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(276deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-40 {
+.list-tab .list-tab-body .col-right .progress-40 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(294deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-45 {
+.list-tab .list-tab-body .col-right .progress-45 {
   background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient(312deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-50 {
+.list-tab .list-tab-body .col-right .progress-50 {
   background: linear-gradient(-90deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-55 {
+.list-tab .list-tab-body .col-right .progress-55 {
   background: linear-gradient(-72deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-60 {
+.list-tab .list-tab-body .col-right .progress-60 {
   background: linear-gradient(-54deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-65 {
+.list-tab .list-tab-body .col-right .progress-65 {
   background: linear-gradient(-36deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-70 {
+.list-tab .list-tab-body .col-right .progress-70 {
   background: linear-gradient(-18deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-75 {
+.list-tab .list-tab-body .col-right .progress-75 {
   background: linear-gradient(0deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-80 {
+.list-tab .list-tab-body .col-right .progress-80 {
   background: linear-gradient(18deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-85 {
+.list-tab .list-tab-body .col-right .progress-85 {
   background: linear-gradient(36deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-90 {
+.list-tab .list-tab-body .col-right .progress-90 {
   background: linear-gradient(54deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-95 {
+.list-tab .list-tab-body .col-right .progress-95 {
   background: linear-gradient(72deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .col-right .progress-100 {
+.list-tab .list-tab-body .col-right .progress-100 {
   background: linear-gradient(90deg, #ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, #ffa352 50%, #e7e8e8 50%, #e7e8e8);
 }
-.row .col-right .list-tab-body .stars {
+.list-tab .list-tab-body .stars {
   text-align: center;
   margin-top: 13px;
 }
-.row .col-right .list-tab-body .stars .star {
+.list-tab .list-tab-body .stars .star {
   display: inline-block;
   height: 17px;
   width: 17px;
   background: url(../images/sprite-scroll.png) no-repeat;
   background-position: -59px -120px;
 }
-.row .col-right .list-tab-body .stars .star-active {
+.list-tab .list-tab-body .stars .star-active {
   background-position: -33px -120px;
 }
 
@@ -829,7 +839,7 @@ input[type="text"] {
 }
 
 .footer {
-  padding: 50px 0;
+  padding: 15px 0 25px 0;
 }
 .footer img {
   vertical-align: middle;
