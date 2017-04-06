@@ -136,14 +136,13 @@ form label, form p {
 .register-wrapp .slick-slider {
   margin: 0;
 }
-.register-wrapp:after {
+.register-wrapp::after {
   content: '';
   display: block;
   position: absolute;
   top: 100%;
   left: 0;
   margin-left: 10px;
-  opacity: 0.2;
   background: url(../images/form-shadow.png) no-repeat;
   height: 20px;
   width: 100%;

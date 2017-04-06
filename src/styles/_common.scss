@@ -42,14 +42,13 @@ form {
   .slick-slider{
     margin: 0;
   }
-  &:after{
+  &::after{
     content: '';
     display: block;
     position: absolute;
     top: 100%;
     left: 0;
     margin-left: $base-size;
-    opacity: 0.2;
     background: url(../images/form-shadow.png) no-repeat;
     height: $base-size * 2;
     width: 100%;
