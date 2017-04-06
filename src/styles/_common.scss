@@ -356,6 +356,8 @@ input[type="text"]{
 }
 //Tabs block
 .list-tab{
+  width: 95%;
+  margin: 0 auto;
   .tab-content{
     @include flexbox;
   }
@@ -363,7 +365,7 @@ input[type="text"]{
     a{
       @include border-radius(9px);
       display: inline-block;
-      color: #969696;
+      color: $color_theme;
       font-size: 16px;
       text-decoration: none;
       padding: 4px 9px;
@@ -405,6 +407,12 @@ input[type="text"]{
         }
       }
     }
+    a.inactive{
+      color: $inactive-color;
+    }
+    .list-tab-header__count{
+      color: $inactive-color;
+    }
   }
   .list-tab-body{
     @include box-shadow(1px 1px 3px rgba(0,0,0,0.6));
@@ -431,7 +439,7 @@ input[type="text"]{
           border-top: 1px solid #ffbb30;
           border-bottom: 1px solid #c26a17;
           border-right: 1px solid #dd8510;
-          border-left: 1px solid #ffa326;
+          border-left: 1px solid $color_theme;
           width: 0;
           padding-right: $base-size * 2;
           text-align: right;
@@ -508,7 +516,7 @@ input[type="text"]{
         position: relative;
         width: 90px;
         height: 90px;
-        background-color: $color_ffa352 ;
+        background-color: $color_theme ;
         .overlay{
           position: absolute;
           width: 55px;
@@ -530,11 +538,11 @@ input[type="text"]{
         .progress-#{$i*$step}{
           @if $i < $half{
             $nextdeg: 150deg + ( $increment * $i );
-            background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient($nextdeg, $color_ffa352 50%, #e7e8e8 50%, #e7e8e8);
+            background: linear-gradient(90deg, #e7e8e8 50%, transparent 50%, transparent), linear-gradient($nextdeg, $color_theme 50%, #e7e8e8 50%, #e7e8e8);
           }
           @else{
             $nextdeg: -90deg + ( $increment * ( $i - $half ) );
-            background: linear-gradient($nextdeg, $color_ffa352 50%, transparent 50%, transparent), linear-gradient(270deg, $color_ffa352 50%, #e7e8e8 50%, #e7e8e8);
+            background: linear-gradient($nextdeg, $color_theme 50%, transparent 50%, transparent), linear-gradient(270deg, $color_theme 50%, #e7e8e8 50%, #e7e8e8);
           }
         }
       }

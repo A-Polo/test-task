@@ -485,6 +485,10 @@ input[type="text"] {
   padding: 0;
 }
 
+.list-tab {
+  width: 95%;
+  margin: 0 auto;
+}
 .list-tab .tab-content {
   display: -moz-flex;
   display: -ms-flexbox;
@@ -494,7 +498,7 @@ input[type="text"] {
   border-radius: 9px;
   background-clip: padding-box;
   display: inline-block;
-  color: #969696;
+  color: #ffa352;
   font-size: 16px;
   text-decoration: none;
   padding: 4px 9px;
@@ -534,6 +538,12 @@ input[type="text"] {
   width: 34px;
   top: 0;
 }
+.list-tab .list-tab-header a.inactive {
+  color: #969696;
+}
+.list-tab .list-tab-header .list-tab-header__count {
+  color: #969696;
+}
 .list-tab .list-tab-body {
   -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
@@ -570,7 +580,7 @@ input[type="text"] {
   border-top: 1px solid #ffbb30;
   border-bottom: 1px solid #c26a17;
   border-right: 1px solid #dd8510;
-  border-left: 1px solid #ffa326;
+  border-left: 1px solid #ffa352;
   width: 0;
   padding-right: 20px;
   text-align: right;
