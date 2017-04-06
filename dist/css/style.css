@@ -435,8 +435,8 @@ input[type="text"] {
 }
 .row .code-block img {
   float: left;
-  -webkit-shape-outside: circle();
-          shape-outside: circle();
+  -webkit-shape-outside: circle(50%);
+          shape-outside: circle(50%);
   margin-right: 15px;
 }
 .row .code-block p {
@@ -513,6 +513,7 @@ input[type="text"] {
   -webkit-border-top-left-radius: 0;
 }
 .list-tab .list-tab-body .col-left {
+  padding: 0;
   float: left;
   width: 50%;
 }

@@ -307,7 +307,7 @@ input[type="text"]{
     }
     img{
       float: left;
-      shape-outside: circle();
+      shape-outside: circle(50%);
       margin-right: 15px;
     }
     p{
@@ -385,6 +385,7 @@ input[type="text"]{
     -ms-border-top-left-radius: 0;
     -webkit-border-top-left-radius: 0;
     .col-left{
+      padding: 0;
       @include col-left;
       .progress-bar{
         @include progress-border;
