@@ -414,6 +414,42 @@ input[type="text"] {
   margin-bottom: 34px;
 }
 
+.row {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.row:before, .row:after {
+  content: "";
+  display: table;
+}
+.row:after {
+  clear: both;
+}
+.row .col-left {
+  width: 50%;
+  padding-right: 70px;
+}
+.row .code-block .code-block-title {
+  margin-bottom: 34px;
+}
+.row .code-block img {
+  float: left;
+  -webkit-shape-outside: circle(50%);
+          shape-outside: circle(50%);
+  margin-right: 15px;
+}
+.row .code-block p {
+  font-size: 14px;
+  text-align: justify;
+}
+.row .col-right {
+  width: 50%;
+}
+.row .col-right .user-list {
+  padding: 0;
+}
+
 .list-tab .tab-content {
   display: -moz-flex;
   display: -ms-flexbox;
