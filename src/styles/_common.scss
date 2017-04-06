@@ -47,6 +47,7 @@ form {
     display: block;
     position: absolute;
     top: 100%;
+    left: 0;
     margin-left: $base-size;
     opacity: 0.2;
     background: url(../images/form-shadow.png) no-repeat;
@@ -155,6 +156,7 @@ input[type="text"]{
   margin-bottom: $base-size + 2;
   .error-field{
     position: absolute;
+    top: 12px;
     right: -30px;
     background: url(../images/sprite.png) no-repeat;
     background-position: -20px -2px;
@@ -163,6 +165,7 @@ input[type="text"]{
   }
   .success-field{
     position: absolute;
+    top: 12px;
     right: -34px;
     background: url(../images/sprite.png) no-repeat;
     background-position: -40px -1px;
@@ -192,6 +195,35 @@ input[type="text"]{
 }
 .form-row-check{
   margin-left: 50px;
+}
+.name{
+  position: relative;
+}
+.error-field-text{
+  @include border-radius(7px);
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(0,0,0,0.8);
+  padding: 30px 15px;
+  font-size: 16px;
+  right: -195px;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -10px;
+    top: 50%;
+    margin-top: -10px;
+    border-top: 10px solid transparent;
+    border-right: 10px solid rgba(0,0,0,0.8);
+    border-bottom: 10px solid transparent;
+  }
+  p{
+    color: $bg-base;
+  }
 }
 
 //Todo dropdowns
@@ -400,7 +432,7 @@ input[type="text"]{
           border-bottom: 1px solid #c26a17;
           border-right: 1px solid #dd8510;
           border-left: 1px solid #ffa326;
-          width: 60%;
+          width: 0;
           padding-right: $base-size * 2;
           text-align: right;
           font-size: 9px;
@@ -548,26 +580,28 @@ input[type="text"]{
       font-size: 16px;
       color: #fff;
       margin-top: 10px;
-      .smile{
-        background: url(../images/sprite-scroll.png) no-repeat;
-        height: 17px;
-        width: 17px;
-        background-position: -101px -120px;
-        position: absolute;
-        z-index: 100;
-        left: $base-size;
-        top: 40px;
+    }
+    .image-tooltip-icon{
+      @include transition(0.1s linear);
+      height: 17px;
+      width: 17px;
+      display: block;
+      position: absolute;
+      z-index: 100;
+      top: 40px;
+      background: url(../images/sprite-scroll.png) no-repeat;
+      opacity: 0.5;
+      &:hover{
+        opacity: 1;
       }
-      .add{
-        background: url(../images/sprite-scroll.png) no-repeat;
-        height: 17px;
-        width: 17px;
-        background-position: -76px -120px;
-        position: absolute;
-        z-index: 100;
-        left: $base-size * 4;
-        top: 40px;
-      }
+    }
+    .smile{
+      background-position: -101px -120px;
+      left: $base-size;
+    }
+    .add{
+      background-position: -76px -120px;
+      left: $base-size * 4;
     }
   }
 }
@@ -658,6 +692,9 @@ input[type="text"]{
 //Footer
 .footer{
   padding: 15px 0 25px 0;
+  .footer-row{
+    @include clearfix;
+  }
   img{
     vertical-align: middle;
   }

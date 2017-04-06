@@ -102,4 +102,15 @@ $(function(){
             $('#'+ t + 'C').fadeIn('slow');
         }
     });
+
+    setTimeout(function () {
+        $('.error-field-text').show(500);
+    },1000);
+
+    setTimeout(function () {
+        $('.progress-bar-inset').animate({
+            width: '60%'
+        });
+    },1000);
+
 });
